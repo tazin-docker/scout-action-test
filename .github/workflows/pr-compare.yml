@@ -43,6 +43,7 @@ jobs:
           image: ${{ env.IMAGE_NAME }}:${{ env.REF_TAG }}
           to: ${{ env.IMAGE_NAME }}:${{ env.PUSH_TAG }}
           github-token: ${{ secrets.PR_PAT }}
+          organization: dockerscoutpolicy
 
       - uses: docker/build-push-action@v5
         if: ${{ github.event_name != 'pull_request' }}
