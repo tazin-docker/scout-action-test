@@ -36,7 +36,7 @@ jobs:
           load: true
           tags: ${{ env.IMAGE_NAME }}:${{ env.REF_TAG }}
 
-      - uses: pnorton5432/scout-action@testing
+      - uses: felipecruz91/scout-action@main
         if: ${{ github.event_name == 'pull_request' }}
         with:
           command: compare
