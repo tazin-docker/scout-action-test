@@ -39,9 +39,10 @@ jobs:
       - uses: felipecruz91/scout-action@main
         if: ${{ github.event_name == 'pull_request' }}
         with:
-          command: compare
+          command: policy
+          # command: compare
           image: ${{ env.IMAGE_NAME }}:${{ env.REF_TAG }}
-          to: ${{ env.IMAGE_NAME }}:${{ env.PUSH_TAG }}
+          # to: ${{ env.IMAGE_NAME }}:${{ env.PUSH_TAG }}
           github-token: ${{ secrets.PR_PAT }}
           organization: dockerscoutpolicy
 
